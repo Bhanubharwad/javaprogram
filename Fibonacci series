@@ -1,0 +1,27 @@
+import java.io.*;
+import java.lang.*;
+
+class Fibonacci
+{
+    public static void main(String args[]) throws IOException
+    {
+        if (args.length == 1)
+        {
+            int n = Integer.parseInt(args[0]);
+            int a = 0, b = 1, c = 0, i = 0;
+            while (i < n)
+            {
+                System.out.print(c + "\t");
+
+                a = b;
+                b = c;
+                c = a + b;
+                i++;
+            }
+        }
+        else
+        {
+            System.out.println("You havent supplied the arguments: {Usage : java fibonacci 34 } to print the first 34 fibonacci numbers.");
+        }
+    }
+}
